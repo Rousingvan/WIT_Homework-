@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Home work</title>
+      <style> 
+            body{
+                  background-color: black;
+            }
+            .avt-round-contn img{
+                  width: 100px; /* Set the width of the avatar */
+                  height: 100px; /* Set the height of the avatar */
+                  border-radius: 100%; /* Make the shape circular */
+                  overflow:hidden; /* Hide any overflow content */
+                  border: 0.5px solid #ddd; /* Optional: Add a border */
+                  object-fit:cover ;
+            }
+            button {
+                  width: ;
+                  padding: 10px;
+                  background-color: white;
+                  color: black;
+                  border: none;
+                  border-radius: 4px;
+                  cursor: pointer;
+            }
+            p{    
+                  color: aliceblue;
+            }
+            body {
+                  background-color: #1e1e1e;
+                  color: #ffffff;
+                  font-family: Arial, sans-serif;
+                  display: flex;
+                  justify-content: space-around;
+                  align-items: self-start;
+                  height: auto;
+                  margin: 0;
+            }
+            .form-container {
+                  background-color: #2b2b2b;
+                  padding: 20px;
+                  border-radius: 10px;
+                  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+                  width: 300px;
+            }
+            .form-container h2 {
+                  margin-bottom: 20px;
+                  font-size: 1.5em;
+            }
+            .form-container input, .form-container select, .form-container button {
+                  width: 100%;
+                  padding: 10px;
+                  margin-bottom: 15px;
+                  border: none;
+                  border-radius: 5px;
+            }
+            .form-container input, .form-container select {
+                  background-color: #3b3b3b;
+                  color: #ffffff;
+            }
+            .form-container button {
+                  background-color: #ffffff;
+                  color: #000000;
+                  cursor: pointer;
+                  font-weight: bold;
+            }
+            .form-container button:hover {
+                  background-color: #f0f0f0;
+            }
+            .loading{
+                  width: 20px;
+                  height: 20px;
+                  border: 3px solid #f3f3f3; /* Light grey */
+                 // border-top: 3px solid #3498db; /* Blue */
+                  border-radius: 100%;
+                  //animation: spin 1s linear infinite;
+            }
+      </style>
+</head>
+<body >
+      <div class="avt-round-contn">
+            <img src="https://cdn-i.vtcnews.vn/upload/2023/07/04/photo-1-16270491926971679751881-3806-07104843.jpeg" alt="My husband">
+            <p style="color: aliceblue;"> My husband </p>
+            <button type="submit" > View profile</button> 
+      </div>
+      <div class="form-container">
+            <h2>Create project</h2>
+            <h3 style="color: #3b3b3b;"></h3>
+            <form>
+                <label for="project-name">Name</label>
+                <input type="text" id="project-name" name="project-name" placeholder="Name of your project" required>
+                
+                <label for="framework">Framework</label>
+                <select id="framework" name="framework">
+                    <option value="">Select</option>
+                    <option value="react">React</option>
+                    <option value="vue">Vue</option>
+                    <option value="angular">Angular</option>
+                </select>
+                
+                <button type="submit">Deploy</button>
+                <button type="button">Cancel</button>
+            </form>
+        </div>
+      <div class="loading"></div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--
+<head> : noi khai bao lien ket den cac tai nguyen
+      meta: dinh dang
+     ( UTF8: dinh dang tieng viet
+      gan keyword: de cho may chu tim kiem/ toi uu tim kiem)
+      title: hien thi tren the/ tab trinh duyet
+      <link : gan 1 file tai lieuj de lamf dep, day du thong tin hon, 
+      vd: ;ien ket den file css den dep hon
+      ko can coa chuh trong vao the vi minh co the chinh sua = css
+      a href : an vao de hien thi trang moi 
+      ==> minh se gan link vao day
+      src: tro link den 1 file tai nguyen: anh. vid
+      href: trng wweb
+      moziladoc
+      - trinh duyẹt se đọc sãn nhưng cái setsizze
+
+      - dùng reset css(nó là 1 file css): bỏ hết những cái style có sãn của trình duyệt
+      - nhớ cách xem file html trên trình duyệt: mở dev tool: có thể code trực tiếp js trên connssol
+      - <p > :
+      -<span> : hiện/in chữ nhưng ko mang ý nghĩa gì==> dùng khi : khi mình muốn nó ko ap 1 cái style sẵn nào// ko quan tam den ngu nghia
+            va dung khi muon style hoàn toàn lại từ đầu==> bị mất hoàn toàn những dấu cách
+      - <pre> : du nguyên tất cả mọi thứ từ dấu ccachs==> dữ nguyên văn bản(có style săn của trình duyệt)
+      - điều khiển thằng con theo thằng cha=> sử dụng 1 cái bọc để bọc thế tất cả các con element
+      ==> rồi sau đó dùng css để layout nó==> dung thẻ <div>
+
+      == quy ước: dọcd file index trong 1 thư mục đầu tiên       
+      cos 2 cách nạp file css vào thẻ
+      css selector: tro toi the css mà mình cần để gắn tyle lên nó
+      id/ class: gắn cho nó 1 cái mã/ cái tên để sau dêx bề gọi lại dễ hơn
+      id: sử dụng với cái tên bást kỳ và ko bi trù
+      class: như là 1 nhóm==> khi muốn trỏ tới 1 nhóm element
+      khi muốn css thành phần nhất định:==> id/class==> syntax: .<tên>{ } hoác là <tag>.<tên> 
+            vd: <h>.lta
+      - div>p.{
+      // đọc ngược lại: thẻ p nằm trng div thì sẽ chịu tác dụng}
+
+      <tag> > <tag>
+      <tag> <tag>
+      <tag> ~ <tag> mien la ngay sau
+      <tag> +<>tag : ngay sau tag 1
+      vd: p:nth-child(3): thẻ p thứ 3 được trỏ đến thẻ con thứ n : chúy là thứ +con
+      càng viết sau thì cangf ưu tiên
+      ==> *important để ko bị phá bởi sự ưu tiên
+
+-->
